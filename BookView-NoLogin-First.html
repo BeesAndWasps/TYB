@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="us-ascii" />
+	<title>Book Page Demo</title>
+	<style type="text/css">
+*
+{
+	font-family: sans-serif;
+}
+div.infobox p
+{
+	margin-left: 1em;
+}
+button
+{
+	font-size: 100%;
+	line-height: 1.5em;
+}
+span.tag
+{
+	border: 2px solid #F88;
+	background-color: #FCC;
+	border-radius: 0.3em;
+	padding-top: 0.1em;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	cursor: pointer;
+	display: inline-block;
+	white-space: pre;
+	font-weight: bold;
+	margin: 0.2em;
+	line-height: 1.5em;
+}
+span.tag.major
+{
+	background-color: #F88;
+}
+span.tag.author
+{
+	border-color: #8DF;
+	background-color: #CEF;
+}
+span.tag.author.major
+{
+	background-color: #8DF;
+}
+span.tag.series, span.tag.setting
+{
+	background-color: #ACE5AC;
+	border-color: #6C6;
+}
+span.tag.series.major, span.tag.setting.major
+{
+	background-color: #6C6;
+}
+span.tag.character
+{
+	background-color: #FEC;
+	border-color: #FB8;
+}
+span.tag.character.major
+{
+	background-color: #FB8;
+	border-color: #FB8;
+}
+span.tag.unofficial, span.tag.minor
+{
+	font-weight: normal;
+	font-style: oblique;
+}
+span.taginfo
+{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	padding: 0%;
+	margin: 0%;
+	margin-left: 0.2em;
+	border: none;
+	vertical-align: top;
+	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSI1Miw1MDQsMjAsMjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHBhdGggZD0iTTcyLDUxNCBDNzIsNTE5LjUyMyw2Ny41MjI4LDUyNCw2Miw1MjQgQzU2LjQ3NzIsNTI0LDUyLDUxOS41MjMsNTIsNTE0IEM1Miw1MDguNDc3LDU2LjQ3NzIsNTA0LDYyLDUwNCBDNjcuNTIyOCw1MDQsNzIsNTA4LjQ3Nyw3Miw1MTQgWiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03MC4zMzMzLDUxNCBDNzAuMzMzMyw1MTguNjAyLDY2LjYwMjQsNTIyLjMzMyw2Miw1MjIuMzMzIEM1Ny4zOTc2LDUyMi4zMzMsNTMuNjY2Nyw1MTguNjAyLDUzLjY2NjcsNTE0IEM1My42NjY3LDUwOS4zOTgsNTcuMzk3Niw1MDUuNjY3LDYyLDUwNS42NjcgQzY2LjYwMjQsNTA1LjY2Nyw3MC4zMzMzLDUwOS4zOTgsNzAuMzMzMyw1MTQgWiIvPjxwYXRoIGZpbGw9IiMwNmYiIGQ9Ik02MS4wMDU0LDUxNy4xMjcgTDYzLjE2MSw1MTcuMTI3IEw2My4xNjEsNTE5LjIxNyBMNjEuMDA1NCw1MTkuMjE3IFogTTU4LjM2NSw1MTEuOTE4IFE1OC40NTE4LDUwOS44NTcsNTkuODA0NSw1MDguOTk2IFE2MC42NTgxLDUwOC40NDYsNjEuOTAyMyw1MDguNDQ2IFE2My41MzcyLDUwOC40NDYsNjQuNjE4Niw1MDkuMjI4IFE2NS43MDAxLDUxMC4wMDksNjUuNzAwMSw1MTEuNTQyIFE2NS43MDAxLDUxMi40ODMsNjUuMjI5OSw1MTMuMTI3IFE2NC45NTUsNTEzLjUxNyw2NC4xNzM4LDUxNC4xMjUgTDYzLjY2MDIsNTE0LjUyMyBRNjMuMjQwNiw1MTQuODQ4LDYzLjEwMzIsNTE1LjI4MiBRNjMuMDE2Myw1MTUuNTU3LDYzLjAwOTEsNTE2LjEzNiBMNjEuMDU2LDUxNi4xMzYgUTYxLjA5OTQsNTE0LjkxMyw2MS4yODc1LDUxNC40NDcgUTYxLjQ3NTUsNTEzLjk4LDYyLjI1NjgsNTEzLjM3MiBMNjIuNzg0OSw1MTIuOTYgUTYzLjA0NTMsNTEyLjc2NSw2My4yMDQ0LDUxMi41MzMgUTYzLjQ5MzgsNTEyLjEzNSw2My40OTM4LDUxMS42NTggUTYzLjQ5MzgsNTExLjEwOCw2My4xNzE5LDUxMC42NTYgUTYyLjg1LDUxMC4yMDQsNjEuOTk2NCw1MTAuMjA0IFE2MS4xNTczLDUxMC4yMDQsNjAuODA2NCw1MTAuNzYxIFE2MC40NTU2LDUxMS4zMTgsNjAuNDU1Niw1MTEuOTE4IFoiLz48L3N2Zz4K);
+}
+	</style>
+	<script type="text/javascript">
+function mockupclick(x)
+{
+	if (x == "tag")
+	{
+		window.alert( "This is a nonfunctional mockup. If this were a working version, you would now be taken to a search results screen showing works which share this tag." );
+	}
+	if (x == "tagdefinition")
+	{
+		window.alert( "This is a nonfunctional mockup. If this were a working version, you would now be taken (possibly in a new window) to the definition of this tag in the wiki." );
+	}
+	return true;
+}
+	</script>
+</head>
+<body>
+<div class="infobox">
+<h1 class="title">The Colour of Magic</h1>
+<h2 class="author">Author:<span onclick="mockupclick('tag')" class="tag author major">Pratchett, Terry</span></h2>
+<h3>Series/Setting/Major Locations</h3>
+<p><span onclick="mockupclick('tag')" class="tag setting major">Discworld</span><span onclick="mockupclick('tag')" class="tag setting minor">Ankh-Morpork</span><span onclick="mockupclick('tag')" class="tag setting minor">Unseen University</span>
+<h3>Characters</h3>
+<p><span onclick="mockupclick('tag')" class="tag character major">Rincewind</span><span onclick="mockupclick('tag')" class="tag character major">The Luggage</span><span onclick="mockupclick('tag')" class="tag character major">Twoflower</span><span onclick="mockupclick('tag')" class="tag character">Lord Vetinari</span><span onclick="mockupclick('tag')" class="tag character">Death</span><span onclick="mockupclick('tag')" class="tag character">Hrun the Barbarian</span><span onclick="mockupclick('tag')" class="tag character">Great A&rsquo;Tuin</span><span onclick="mockupclick('tag')" class="tag character">Bel-Shamharoth</span><span onclick="mockupclick('tag')" class="tag character minor">Fate (God)</span><span onclick="mockupclick('tag')" class="tag character minor">The Lady (God)</span><span onclick="mockupclick('tag')" class="tag character minor">Camera Imp</span><span onclick="mockupclick('tag')" class="tag character minor">Blind Io (God)</span>
+<h3>Tags</h3>
+<p><span onclick="mockupclick('tag')" class="tag major">Fantasy<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag major">Humor<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag major">Magic<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag major">Tourism<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">&#x2620; Minor Character Death<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">&#x1F51E; Brief Nudity/Erotic Description<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">&#x2694; Arson<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">&#x2694; Insurance Fraud<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">&#x2694; Kidnapping<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">Wizards<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">Picaresque<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">Dragons<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">Travel<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">Magic Imitating Technology<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">Eldrich Horrors<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag">Gods<span onclick="if(event.stopPropagation){event.stopPropagation();}event.cancelBubble=true;mockupclick('tagdefinition');" class="taginfo"></span></span><span onclick="mockupclick('tag')" class="tag minor">Parody: Ringworld</span><span onclick="mockupclick('tag')" class="tag minor">Parody: Anne McCaffrey</span><span onclick="mockupclick('tag')" class="tag minor">Parody: Conan the Barbarian</span>
+<h3>Editions</h3>
+<p>[I&rsquo;m not going to bother looking up this information, so mentally insert a list of ISBN numbers, publishers, and publication years here.]
+<h3>Other Sites</h3>
+<ul>
+<li><a href=""><i>The Colour of Magic</i> on GoodReads</a></li>
+<li><a href=""><i>The Colour of Magic</i> on Amazon</a></li>
+</ul>
+<p>To add, remove, or dispute information, you must be logged in.</p>
+</div>
+</body>
+</html>
