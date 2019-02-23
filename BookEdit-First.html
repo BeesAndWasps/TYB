@@ -37,7 +37,7 @@ div.content
 div.blocker
 {
 	background-color: #FFF;
-	background-color: rgba( 255, 255, 255, 0.75 );
+	background-color: rgba( 255, 255, 255, 0.85 );
 }
 div.blocker > div
 {
@@ -64,6 +64,7 @@ button
 {
 	font-size: 100%;
 	line-height: 1.5em;
+	cursor: pointer;
 }
 input.add
 {
@@ -96,7 +97,6 @@ span.tag
 	padding-top: 0.1em;
 	padding-left: 0.3em;
 	padding-right: 0.3em;
-	cursor: pointer;
 	display: inline-block;
 	white-space: pre;
 	font-weight: bold;
@@ -146,25 +146,96 @@ span.tag.edition
 	background-color: #EEE;
 	font-weight: normal;
 }
-span.taginfo
-{
-	display: inline-block;
-	width: 20px;
-	height: 20px;
-	padding: 0%;
-	margin: 0%;
-	margin-left: 0.2em;
-	border: none;
-	vertical-align: top;
-	background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgdmVyc2lvbj0iMS4xIiB2aWV3Qm94PSI1Miw1MDQsMjAsMjAiIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PHBhdGggZD0iTTcyLDUxNCBDNzIsNTE5LjUyMyw2Ny41MjI4LDUyNCw2Miw1MjQgQzU2LjQ3NzIsNTI0LDUyLDUxOS41MjMsNTIsNTE0IEM1Miw1MDguNDc3LDU2LjQ3NzIsNTA0LDYyLDUwNCBDNjcuNTIyOCw1MDQsNzIsNTA4LjQ3Nyw3Miw1MTQgWiIvPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik03MC4zMzMzLDUxNCBDNzAuMzMzMyw1MTguNjAyLDY2LjYwMjQsNTIyLjMzMyw2Miw1MjIuMzMzIEM1Ny4zOTc2LDUyMi4zMzMsNTMuNjY2Nyw1MTguNjAyLDUzLjY2NjcsNTE0IEM1My42NjY3LDUwOS4zOTgsNTcuMzk3Niw1MDUuNjY3LDYyLDUwNS42NjcgQzY2LjYwMjQsNTA1LjY2Nyw3MC4zMzMzLDUwOS4zOTgsNzAuMzMzMyw1MTQgWiIvPjxwYXRoIGZpbGw9IiMwNmYiIGQ9Ik02MS4wMDU0LDUxNy4xMjcgTDYzLjE2MSw1MTcuMTI3IEw2My4xNjEsNTE5LjIxNyBMNjEuMDA1NCw1MTkuMjE3IFogTTU4LjM2NSw1MTEuOTE4IFE1OC40NTE4LDUwOS44NTcsNTkuODA0NSw1MDguOTk2IFE2MC42NTgxLDUwOC40NDYsNjEuOTAyMyw1MDguNDQ2IFE2My41MzcyLDUwOC40NDYsNjQuNjE4Niw1MDkuMjI4IFE2NS43MDAxLDUxMC4wMDksNjUuNzAwMSw1MTEuNTQyIFE2NS43MDAxLDUxMi40ODMsNjUuMjI5OSw1MTMuMTI3IFE2NC45NTUsNTEzLjUxNyw2NC4xNzM4LDUxNC4xMjUgTDYzLjY2MDIsNTE0LjUyMyBRNjMuMjQwNiw1MTQuODQ4LDYzLjEwMzIsNTE1LjI4MiBRNjMuMDE2Myw1MTUuNTU3LDYzLjAwOTEsNTE2LjEzNiBMNjEuMDU2LDUxNi4xMzYgUTYxLjA5OTQsNTE0LjkxMyw2MS4yODc1LDUxNC40NDcgUTYxLjQ3NTUsNTEzLjk4LDYyLjI1NjgsNTEzLjM3MiBMNjIuNzg0OSw1MTIuOTYgUTYzLjA0NTMsNTEyLjc2NSw2My4yMDQ0LDUxMi41MzMgUTYzLjQ5MzgsNTEyLjEzNSw2My40OTM4LDUxMS42NTggUTYzLjQ5MzgsNTExLjEwOCw2My4xNzE5LDUxMC42NTYgUTYyLjg1LDUxMC4yMDQsNjEuOTk2NCw1MTAuMjA0IFE2MS4xNTczLDUxMC4yMDQsNjAuODA2NCw1MTAuNzYxIFE2MC40NTU2LDUxMS4zMTgsNjAuNDU1Niw1MTEuOTE4IFoiLz48L3N2Zz4K);
-}
 div.content table
 {
 	border: none;
 	margin-left: 1em;
 }
+table#author_table td
+{
+	text-align: right;
+}
+table#author_table td + td + td + td
+{
+	text-align: left;
+}
+select
+{
+	font-size: 100%;
+	line-height: 1.5em;
+}
+option
+{
+	font-size: 100%;
+	line-height: 1.5em;
+}
 	</style>
 	<script type="text/javascript">
+var data = {
+	titles: [
+			{ name: 'The Colour of Magic', type: 0 },
+			{ name: 'The Color of Magic', type: 1 },
+			{ name: 'An Obviously Fake Title For Demonstration Purposes', type: 2 }
+		],
+	authors: [
+			{ name: 'Pratchett, Terry', role: 0, type: 0, id: 1000 },
+			{ name: 'Kidby, Paul', role: 2, type: 1, id: 1001 },
+			{ name: 'Kirby, Josh', role: 2, type: 1, id: 1002 },
+			{ name: 'Smithee, Alan', role: 4, type: 1, id: 1003 },
+			{}
+		],
+	series: [
+			{ name: 'Discworld', role: 0, type: 0, id: 2000 },
+			{ name: 'Ankh-Morpork', role: 1, type: 1, id: 2001 },
+			{ name: 'Unseen University', role: 1, type: 1, id: 2002 },
+			{ name: 'Krull', role: 1, type: 1, id: 2003 },
+			{ name: 'Wyrmburg', role: 1, type: 2, id: 2004 },
+			{}
+		],
+	characters: [
+			{ name: 'Rincewind', type: 0, id: 3000 },
+			{ name: 'Twoflower', type: 0, id: 3001 },
+			{ name: 'The Luggage', type: 0, id: 3002 },
+			{ name: 'Lord Havelock Vetinari', type: 1, id: 3003 },
+			{ name: 'Death', type: 1, id: 3004 },
+			{ name: 'Great A&rsquo;Tuin', type: 1, id: 3005 },
+			{ name: 'Hrun the Barbarian', type: 2, id: 3006 },
+			{ name: 'Bel-Shamharoth', type: 2, id: 3007 },
+			{ name: 'Fate (God)', type: 1, id: 3008 },
+			{ name: 'The Lady (God)', type: 1, id: 3009 },
+			{ name: 'Camera Imp', type: 1, id: 3010 },
+			{ name: 'Blind Io (God)', type: 1, id: 3011 },
+			{ name: 'Liessa Wyrmbidder', type: 2, id: 3012 },
+			{ name: 'Druellae', type: 2, id: 3013 },
+			{ name: 'Marchesa', type: 2, id: 3014 },
+			{ name: 'Kring', type: 2, id: 3015 },
+			{}
+		],
+	tags: [
+			{ name: 'Fantasy', type: 0, group: 0, id: 4000 },
+			{ name: 'Humor', type: 0, group: 0, id: 4001 },
+			{ name: 'Magic', type: 0, group: 0, id: 4002 },
+			{ name: 'Tourism', type: 0, group: 0, id: 4003 },
+			{ name: 'Minor Character Death', type: 1, group: 3, id: 4004 },
+			{ name: 'Brief Nudity/Erotic Description', type: 1, group: 2, id: 4005 },
+			{ name: 'Arson', type: 1, group: 1, id: 4006 },
+			{ name: 'Insurance Fraud', type: 1, group: 1, id: 4007 },
+			{ name: 'Kidnapping', type: 1, group: 1, id: 4008 },
+			{ name: 'Wizards', type: 1, group: 0, id: 4009 },
+			{ name: 'Picaresque', type: 1, group: 0, id: 4010 },
+			{ name: 'Dragons', type: 1, group: 0, id: 4011 },
+			{ name: 'Travel', type: 1, group: 0, id: 4012 },
+			{ name: 'Magic Imitating Technology', type: 1, group: 0, id: 4013 },
+			{ name: 'Eldritch Horrors', type: 1, group: 0, id: 4014 },
+			{ name: 'Gods', type: 1, group: 0, id: 4015 },
+			{ name: 'Parody: Ringworld', type: 2, group: 0, id: 4016 },
+			{ name: 'Parody: Anne McCaffrey', type: 2, group: 0, id: 4017 },
+			{ name: 'Parody: Conan the Barbarian', type: 2, group: 0, id: 4018 },
+			{}
+		]
+};
+var author_roles = [ 'Author', 'Translator', 'Illustrator', 'Editor', 'Key Grip' ];
+var tag_symbols = [ '', '&#x2694; ', '&#x1F51E; ', '&#x2620; ' ];
 function optionsclick(type,tag,major,deletable,demotable)
 {
 	document.getElementById('blocker').style.display = 'inherit';
@@ -185,132 +256,286 @@ function optionsclick(type,tag,major,deletable,demotable)
 	}
 	return true;
 }
-function canceloptions(type)
+function cancel_click(type)
 {
-	document.getElementById('' + type + '_options').style.display = 'none';
-	document.getElementById('blocker').style.display = 'none';
+	document.getElementById( type + '_options' ).style.display = 'none';
+	document.getElementById( 'blocker' ).style.display = 'none';
+}
+function layout()
+{
+	var tag_majority = [ 'major', '', 'minor' ];
+	var t = document.getElementById( 'author_table' );
+	data.authors.sort( function ( a, b ) {
+		return ( a.role == b.role ) ?
+			( ( a.type == b.type ) ?
+				( ( a.name < b.name ) ?
+					( -1 ) :
+					( ( a.name > b.name ) ?
+						( 1 ) :
+						( 0 )
+					)
+				) :
+				( b.group - a.group ) ) :
+			( a.type - b.type );
+		} );
+	for ( var i = ( data.authors.length - 2 ); i >= 0; i-- )
+	{
+		var r = t.insertRow( 0 );
+		var b = add_element( r.insertCell( 0 ), 'button', function(){confirm_click('author',this.authorID);}, null, 'confirm', 'confirmAuthor'+data.authors[i].id );
+		b.innerHTML = '<span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span>';
+		b.authorID = data.authors[i].id;
+		b = add_element( r.insertCell( 1 ), 'button', function(){options_click('author',this.authorID);}, null, 'options', 'optionsAuthor'+data.authors[i].id );
+		b.innerHTML = '<span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span>';
+		b.authorID = data.authors[i].id;
+		r.insertCell( 2 ).innerHTML = author_roles[ data.authors[i].role ];
+		add_element( r.insertCell( 3 ), 'span', null, null, 'tag author ' + (tag_majority[data.authors[i].type]), 'tagAuthor'+data.authors[i].id ).innerHTML = data.authors[i].name;
+	}
+	data.series.sort( function ( a, b ) {
+		return ( a.type == b.type ) ?
+			( ( a.name < b.name ) ?
+				( -1 ) :
+				( ( a.name > b.name ) ?
+					( 1 ) :
+					( 0 )
+				)
+			) :
+			( a.type - b.type );
+		} );
+	t = document.getElementById( 'series_table' );
+	for ( var i = ( data.series.length - 2 ); i >= 0; i-- )
+	{
+		var r = t.insertRow( 0 );
+		var b = add_element( r.insertCell( 0 ), 'button', function(){confirm_click('series',this.seriesID);}, null, 'confirm', 'confirmSeries'+data.series[i].id );
+		b.innerHTML = '<span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span>';
+		b.seriesID = data.series[i].id;
+		b = add_element( r.insertCell( 1 ), 'button', function(){options_click('series',this.seriesID);}, null, 'options', 'optionsSeries'+data.series[i].id );
+		b.innerHTML = '<span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span>';
+		b.seriesID = data.series[i].id;
+		add_element( r.insertCell( 2 ), 'span', null, null, 'tag series ' + (tag_majority[data.series[i].type]), 'tagSeries'+data.series[i].id ).innerHTML = data.series[i].name;
+	}
+	data.characters.sort( function ( a, b ) {
+		return ( a.type == b.type ) ?
+			( ( a.name < b.name ) ?
+				( -1 ) :
+				( ( a.name > b.name ) ?
+					( 1 ) :
+					( 0 )
+				)
+			) :
+			( a.type - b.type );
+		} );
+	t = document.getElementById( 'character_table' );
+	for ( var i = ( data.characters.length - 2 ); i >= 0; i-- )
+	{
+		var r = t.insertRow( 0 );
+		var b = add_element( r.insertCell( 0 ), 'button', function(){confirm_click('character',this.characterID);}, null, 'confirm', 'confirmCharacter'+data.characters[i].id );
+		b.innerHTML = '<span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span>';
+		b.characterID = data.characters[i].id;
+		b = add_element( r.insertCell( 1 ), 'button', function(){options_click('character',this.characterID);}, null, 'options', 'optionsSeries'+data.characters[i].id );
+		b.innerHTML = '<span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span>';
+		b.characterID = data.characters[i].id;
+		add_element( r.insertCell( 2 ), 'span', null, null, 'tag character ' + (tag_majority[data.characters[i].type]), 'tagSeries'+data.characters[i].id ).innerHTML = data.characters[i].name;
+	}
+	data.tags.sort( function ( a, b ) {
+		return ( a.type == b.type ) ?
+			( ( a.group == b.group ) ?
+				( ( a.name < b.name ) ?
+					( -1 ) :
+					( ( a.name > b.name ) ?
+						( 1 ) :
+						( 0 )
+					)
+				) :
+				( b.group - a.group ) ) :
+			( a.type - b.type );
+		} );
+	t = document.getElementById( 'tags_table' );
+	for ( var i = ( data.tags.length - 2 ); i >= 0; i-- )
+	{
+		var r = t.insertRow( 0 );
+		var b = add_element( r.insertCell( 0 ), 'button', function(){confirm_click('tag',this.tagID);}, null, 'confirm', 'confirmTag'+data.tags[i].id );
+		b.innerHTML = '<span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span>';
+		b.tagID = data.tags[i].id;
+		b = add_element( r.insertCell( 1 ), 'button', function(){options_click('tag',this.tagID);}, null, 'options', 'optionsSeries'+data.tags[i].id );
+		b.innerHTML = '<span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span>';
+		b.tagID = data.tags[i].id;
+		add_element( r.insertCell( 2 ), 'span', null, null, 'tag ' + (tag_majority[data.tags[i].type]), 'tag'+data.tags[i].id ).innerHTML = tag_symbols[ data.tags[i].group ] + data.tags[i].name;
+	}
+	var s = document.getElementById( 'author_role_popup' );
+	var t = document.getElementById( 'new_author_role' );
+	for ( var i = 0; i < author_roles.length; i++ )
+	{
+		var o = document.createElement( 'option' );
+		o.value = i;
+		o.text = author_roles[ i ];
+		s.add( o );
+		t.add( o.cloneNode( true ) );
+	}
+}
+function add_element(container,tag,clickScript,content,cssClass,idName)
+{
+	var e = document.createElement(tag);
+	if ( clickScript != null )
+	{
+		e.onclick = clickScript;
+	}
+	if ( content != null )
+	{
+		e.appendChild(content);
+	}
+	if ( cssClass != null )
+	{
+		e.className = cssClass;
+	}
+	if ( idName != null )
+	{
+		e.id = idName;
+	}
+	container.appendChild(e);
+	return e;
+}
+function add_new_tag( type )
+{
+	window.alert( 'If this were not a mockup, at this point the page would contact the server and attempt to add your new tag. The page would then update to reflect any changes which were accepted.\n\nWe now return you to the mockup.' );
+	document.getElementById( 'new_' + type + '_input' ).value = '';
+	document.getElementById( 'add_' + type ).disabled = true;
+}
+function update_options( type )
+{
+	window.alert( 'If this were not a mockup, at this point the page would contact the server and report your changes. The page would also update to reflect any changes which were accepted. (This particular mockup has a button for confirmation. In theory this might cause tags to be locked if enough users confirm a tag, or might require multiple users to edit and reconfirm tags before they would really change. The details are not fully fleshed-out yet.)\n\nIn any event, we now return you to the mockup.' );
+	cancel_click( type );
+}
+function new_tag_change( type, input )
+{
+	var b = document.getElementById( 'add_' + type );
+	b.disabled = ( input.value == '' );
+}
+function delete_tag( type )
+{
+	window.alert( 'If this were not a mockup, at this point the page would contact the server and tell it to remove this tag from this work. (If this was the only instance of this tag, although some record would undoubtedly be kept, the tag would probably cease to be part of autocompletion for tag addition.) If the tag had already been confirmed (presuming that the confirmation buttons were part of the final design), it might be that multiple users would need to try to delete the tag before it would really be removed, to overcome previous confirmations; the details have not been settled.\n\nIn any event, we now return you to the mockup.' );
+	cancel_click( type );
+}
+function confirm_click( type, id )
+{
+	var o = find_object_by_id( type, id );
+	if ( o == null )
+	{
+		window.alert( 'There is an error somewhere, because the tag you just clicked to confirm has an ID which cannot be found by the page! Sorry!' );
+	}
+	else
+	{
+		m = '';
+		switch ( type )
+		{
+			case 'author':
+				m = 'You just clicked the button to confirm that the data for author ID ' + id + ':\n\n    ' + author_roles[ o.role ] + ': ' + o.name + ' (' + ( ( o.type == 0 ) ? ( 'Shown in Brief Summaries' ) : ( 'Not Shown in Brief Summaries' ) ) + ')\n\nis correct.';
+				break;
+			case 'character':
+				m = 'You just clicked the button to confirm that the data for character ID ' + id + ':\n\n    ' + o.name + ' (' + ( ( o.type == 0 ) ? ( 'Main Character' ) : ( 'Minor Character' ) ) + ')\n\nis correct.';
+				break;
+			case 'series':
+				m = 'You just clicked the button to confirm that the data for series/location ID ' + id + ':\n\n    ' + o.name + ' (' + ( ( o.type == 0 ) ? ( 'Shown in Brief Summaries' ) : ( 'Not Shown in Brief Summaries' ) ) + ')\n\nis correct.';
+				break;
+			case 'tag':
+				m = 'You just clicked the button to confirm that the data for tag ID ' + id + ':\n\n    ' + o.name + ' (' + ( ( o.type == 0 ) ? ( 'Shown in Brief Summaries' ) : ( 'Not Shown in Brief Summaries' ) ) + ')\n\nis correct.';
+				break;
+			default:
+				window.alert( 'Some sort of error has occurred; you clicked a confirm button but the type of data you were confirming is apparently unknown to the response function. Sorry!' );
+				return false;
+		}
+		window.alert( m + '\n\nSince this is just a mockup, nothing more will happen. (This is a point at which a real page would connect to the server and exchange some data.)' );
+	}
+}
+function options_click( type, id )
+{
+	var o = find_object_by_id( type, id );
+	if ( o == null )
+	{
+		window.alert( 'There is an error somewhere, because the tag you just clicked to confirm has an ID which cannot be found by the page! Sorry!' );
+	}
+	else
+	{
+		document.getElementById( 'blocker' ).style.display = 'inherit';
+		document.getElementById( type + '_options' ).style.display = 'inherit';
+		switch( type )
+		{
+			case 'author':
+				document.getElementById( 'author_options_name' ).innerText = o.name;
+				document.getElementById( 'author_options_id' ).innerText = o.id;
+				document.getElementById( 'author_role_popup' ).value = o.role;
+				document.getElementById( 'author_type_checkbox' ).checked = ( o.type == 0 ) ? ( 'checked' ) : ( '' );
+				break;
+			case 'character':
+				document.getElementById( 'character_options_name' ).value = o.name;
+				document.getElementById( 'character_options_id' ).innerText = o.id;
+				document.getElementById( 'character_type_checkbox' ).checked = ( o.type == 0 ) ? ( 'checked' ) : ( '' );
+				break;
+			case 'series':
+				document.getElementById( 'series_options_name' ).value = o.name;
+				document.getElementById( 'series_options_id' ).innerText = o.id;
+				document.getElementById( 'series_type_checkbox' ).checked = ( o.type == 0 ) ? ( 'checked' ) : ( '' );
+				break;
+			case 'tag':
+				document.getElementById( 'tag_options_name' ).value = o.name;
+				document.getElementById( 'tag_options_id' ).innerText = o.id;
+				document.getElementById( 'tag_type_checkbox' ).checked = ( o.type == 0 ) ? ( 'checked' ) : ( '' );
+				break;
+			default:
+				document.getElementById('blocker').style.display = 'none';
+				window.alert( 'Some sort of error has occurred; the tag you just clicked on was of a type not recognized by the script. Sorry!' );
+		}
+	}
+}
+function find_object_by_id( type, id )
+{
+	var x = null;
+	switch ( type )
+	{
+		case 'author':
+			x = data.authors;
+			break;
+		case 'series':
+			x = data.series;
+			break;
+		case 'character':
+			x = data.characters;
+			break;
+		case 'tag':
+			x = data.tags;
+			break;
+		default:
+			break;
+	}
+	if ( x == null ) return null;
+	for ( var i = 0; i < ( x.length - 1 ); i++ )
+	{
+		if ( x[ i ].id == id ) return x[ i ];
+	}
+	return null;
 }
 	</script>
 </head>
-<body>
+<body onload="layout();">
 <div class="fullscreen content">
-<div class="infobox">
+<div class="infobox" style="margin: 0.25em;">
 <h1 class="title">The Colour of Magic</h1>
 <h3>Authors</h3>
-	<table>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button onclick="optionsclick('author','Pratchett,Terry',true,true,false);"><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td><td><span class="tag author major">Pratchett, Terry</span></td></tr>
-		<tr><td colspan="2" style="text-align: right;"><button><span class="narrowscreen">+</span><span class="widescreen">Add</span></button></td><td><input class="add author" placeholder="Enter name here"></td></tr>
+	<table id="author_table">
+		<tr><td colspan="2" style="text-align: right;"><button onclick="add_new_tag('author');" id="add_author" disabled="true"><span class="narrowscreen">+</span><span class="widescreen">Add</span></button></td><td><select id="new_author_role"></select></td><td><input class="add author" placeholder="Enter name here" oninput="new_tag_change('author',this);" onchange="add_new_tag('author');" id="new_author_input"></td></tr>
 	</table>
 <h3>Series/Setting/Major Locations</h3>
-	<table>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button onclick="optionsclick('series','Discworld',true,true,true);"><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td><td><span class="tag setting major">Discworld</span></td></tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button onclick="optionsclick('series','Ankh-Morpork',false,true,true);"><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td><td><span class="tag setting minor">Ankh-Morpork</span></td></tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button onclick="optionsclick('series','Unseen University',false,true,true);"><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td><td><span class="tag setting minor">Unseen University</span></td></tr>
-		<tr><td colspan="2" style="text-align: right;"><button><span class="narrowscreen">+</span><span class="widescreen">Add</span></button></td><td><input class="add series" placeholder="Enter text here"></td></tr>
+	<table id="series_table">
+		<tr><td colspan="2" style="text-align: right;"><button onclick="add_new_tag('series');" id="add_series" disabled="true"><span class="narrowscreen">+</span><span class="widescreen">Add</span></button></td><td><input class="add series" placeholder="Enter text here" oninput="new_tag_change('series',this);" onchange="add_new_tag('series');" id="new_series_input"></td></tr>
 	</table>
 <h3>Characters</h3>
-	<table>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character major">Rincewind</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character major">The Luggage</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character major">Twoflower</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character">Lord Vetinari</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character">Death</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character">Hrun the Barbarian</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character">Great A&rsquo;Tuin</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character minor">Bel-Shamharoth</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character minor">Fate (God)</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character minor">The Lady (God)</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character minor">Camera Imp</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag character minor">Blind Io (God)</span></td>
-		</tr>
-		<tr><td colspan="2" style="text-align: right;"><button><span class="narrowscreen">+</span><span class="widescreen">Add</span></button></td><td><input class="add character" placeholder="Enter name here"></td></tr>
+	<table id="character_table">
+		<tr><td colspan="2" style="text-align: right;"><button onclick="add_new_tag('character');" id="add_character" disabled="true"><span class="narrowscreen">+</span><span class="widescreen">Add</span></button></td><td><input class="add character" placeholder="Enter name here" oninput="new_tag_change('character',this);" onchange="add_new_tag('character');" id="new_character_input"></td></tr>
 	</table>
 <h3>Tags</h3>
-	<table>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag major">Fantasy</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag major">Humor</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag major">Magic</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag major">Tourism</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Minor Character Death</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Brief Nudity/Erotic Description</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Arson</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Insurance Fraud</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Kidnapping</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Wizards</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Picaresque</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Dragons</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Travel</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Magic Imitating Technology</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Eldritch Horrors</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag">Gods</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag minor">Parody: Ringworld</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag minor">Parody: Anne McCaffrey</span></td>
-		</tr>
-		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td>
-				<td><span class="tag minor">Parody: Conan the Barbarian</span></td>
-		</tr>
-		<tr><td colspan="2" style="text-align: right;"><button><span class="narrowscreen">+</span><span class="widescreen">Add</span></button></td><td><input class="add" placeholder="Enter text here"></td></tr>
+	<table id="tags_table">
+		<tr><td colspan="2" style="text-align: right;"><button onclick="add_new_tag('tag');" id="add_tag" disabled="true"><span class="narrowscreen">+</span><span class="widescreen">Add</span></button></td><td><input class="add" placeholder="Enter text here" oninput="new_tag_change('tag',this);" onchange="add_new_tag('tag');" id="new_tag_input"></td></tr>
 		<tr><td colspan="3" style="text-align: right;"><a href="">Dictionary of Official Tag Definitions</a>
 	</table>
-
 <h3>Editions</h3>
 	<table>
 		<tr><td><button style="font-size: 100%; line-height: 1.5em;"><span class="narrowscreen confirm" style="color: #080;">&#x2714;</span><span class="widescreen">Confirm</span></button></td><td><button><span class="narrowscreen" style="font-weight: bold;">&#x2026;</span><span class="widescreen">Other Options&#x2026;</span></button></td><td><span class="tag edition">Some Publisher, 1990 (ISBN 1-234-56789-0)</span></td></tr>
@@ -323,39 +548,26 @@ function canceloptions(type)
 <li><a href=""><i>The Colour of Magic</i> on Amazon</a></li>
 </ul>
 </div>
-<div class="fullscreen blocker" id="blocker" style="display: none;">
+<div class="fullscreen blocker" id="blocker" nstyle="display: none; z-index: 10;">
+	<div class="options" id="first_view">
+		<div style="position: absolute; left: 0%; top: 0%; right: 0%; height: 3em; background-color: red; color: white;  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-weight: bold; line-height: 3em; padding: 0%;">This Mockup Is Still Not Complete!</div>
+		<div style="padding: 1em; padding-top: 3.5em;">At present, although the Author, Series/Setting, Character, and Tag areas are working (in that you can use the controls up to the point where the page would necessarily have to contact the server), and it has some reactive design (the buttons will iconify if you make the window narrower than 769 pixels), the mockup does not yet implement alternate titles, nor is there any edition-editing mechanism. Sorry, I&rsquo;m just too tired to do that tonight. Please enjoy the rest of the mockup, though, and make suggestions/constructive criticism through Discord. Thanks!</div>
+		<div style="margin: 1em;"><button onclick="document.getElementById('first_view').style.display = 'none';document.getElementById('blocker').style.display = 'none';">Okay, Let&rsquo;s Play With The Mockup!</button></div>
+	</div>
 	<div class="options author" id="author_options" style="display: none;">
-		<table>
-			<tr><td style="padding-bottom: 1em;">Author: <span class="tag author" id="author_options_text"></span></td></tr>
-			<tr><td><button id="author_delete">Reject This Author (Suggest Deletion)</button></td></tr>
-			<tr><td><button id="author_demote">Demote This Author (Mark as Secondary)</button><button id="author_promote">Promote This Author (Mark as Primary)</button></td></tr>
-			<tr><td style="padding-top: 2em;"><button onclick="canceloptions('author');">Cancel</button></td></tr>
-		</table>
+		<div style="position: absolute; left: 0%; top: 0%; right: 0%; height: 2em; background-color: #8DF; font-weight: bold; line-height: 2em; padding: 0%;">Authorial Tag Options</div>
+		<div style="padding-top: 2.2em;"><div style="font-size: 75%;">Record ID <span id="author_options_id"></span></div><div style="padding: 0.5em;"><div style="font-weight: bold; font-size: 125%; margin-bottom: 0.5em;" id="author_options_name"></div><span style="font-size: 75%;">Note: This page only permits you to edit the relation of this person to this particular work. To make changes to information inherent to the person, such as their name, visit the page for this person.</span></div><div style="margin: 0.5em;">Role: <select id="author_role_popup"></select></div><div style="margin: 0.5em;"><input type="checkbox" id="author_type_checkbox">&nbsp;<label for="author_type_checkbox">List in Brief Summary of Book</label></div><div style="margin: 1em;"><button onclick="update_options('author');">Update Information</button></div><div><button onclick="delete_options('author');">Remove From This Work</button></div><div style="margin: 1em; margin-top: 2em;"><button onclick="cancel_click('author');">Cancel</button></div></div>
 	</div>
+	<div class="options character" id="character_options" style="display: none;">
+		<div style="position: absolute; left: 0%; top: 0%; right: 0%; height: 2em; background-color: #FB8; font-weight: bold; line-height: 2em; padding: 0%;">Character Tag Options</div>
+		<div style="padding-top: 2.2em;"><div style="font-size: 75%;">Record ID <span id="character_options_id"></span></div><div style="padding: 0.5em;"><input style="font-weight: bold; font-size: 125%; width: 90%; text-align: center; margin-left: 0%; margin-bottom: 0.5em; line-height: 1.5em; border: 2px solid #FB8; border-radius: 0.3em;" id="character_options_name"></div></div><div style="margin: 0.5em;"><input type="checkbox" id="character_type_checkbox">&nbsp;<label for="character_type_checkbox">Main Character</label></div><div style="margin: 1em;"><button onclick="update_options('character');">Update Information</button></div><div><button onclick="delete_options('character');">Remove From This Work</button></div><div style="margin: 1em; margin-top: 2em;"><button onclick="cancel_click('character');">Cancel</button></div></div>
 	<div class="options series" id="series_options" style="display: none;">
-		<table>
-			<tr><td style="padding-bottom: 1em;">Series/Setting/Location: <span class="tag series" id="series_options_text"></span></td></tr>
-			<tr><td><button id="series_delete">Reject This Series/Setting/Location (Suggest Deletion)</button></td></tr>
-			<tr><td><button id="series_demote">Demote This Setting/Series/Location (Mark as Secondary)</button><button id="series_promote">Promote This Setting/Series/Location (Mark as Primary)</button></td></tr>
-			<tr><td style="padding-top: 2em;"><button onclick="canceloptions('series');">Cancel</button></td></tr>
-		</table>
+		<div style="position: absolute; left: 0%; top: 0%; right: 0%; height: 2em; background-color: #6C6; font-weight: bold; line-height: 2em; padding: 0%;">Series/Setting Tag Options</div>
+		<div style="padding-top: 2.2em;"><div style="font-size: 75%;">Record ID <span id="series_options_id"></span></div><div style="padding: 0.5em;"><input style="font-weight: bold; font-size: 125%; width: 90%; text-align: center; margin-left: 0%; margin-bottom: 0.5em; line-height: 1.5em; border: 2px solid #6C6; border-radius: 0.3em;" id="series_options_name"></div></div><div style="margin: 0.5em;"><input type="checkbox" id="series_type_checkbox">&nbsp;<label for="series_type_checkbox">Display in Brief Summary</label></div><div style="margin: 1em;"><button onclick="update_options('series');">Update Information</button></div><div><button onclick="delete_options('series');">Remove From This Work</button></div><div style="margin: 1em; margin-top: 2em;"><button onclick="cancel_click('series');">Cancel</button></div>
 	</div>
-	<div class="options series" id="character_options" style="display: none;">
-		<table>
-			<tr><td style="padding-bottom: 1em;">Character: <span class="tag character" id="series_options_text"></span></td></tr>
-			<tr><td><button>Reject This Series/Setting/Location (Suggest Deletion)</button></td></tr>
-			<tr><td><button id="character_demote">Demote This Character (Mark as Secondary)</button><button id="character_promote" style="display: none;">Promote This Setting/Series/Location (Mark as Primary)</button></td></tr>
-			<tr><td style="padding-top: 2em;"><button onclick="canceloptions('character');">Cancel</button></td></tr>
-		</table>
-	</div>
-	<div class="options tags" id="tag_options" style="display: none;">
-		<table>
-			<tr><td style="padding-bottom: 1em;">Tag: <span class="tag" id="tag_options_text"></span></td></tr>
-			<tr><td><button>Reject This Tag (Suggest Deletion)</button></td></tr>
-			<tr><td><button>Suggest Tag Merge</button></td></tr>
-			<tr><td><button>Suggest Tag Rename</button></td></tr>
-			<tr><td style="padding-top: 2em;"><button onclick="canceloptions('tag');">Cancel</button></td></tr>
-		</table>
+	<div class="options tag" id="tag_options" style="display: none;">
+		<div style="position: absolute; left: 0%; top: 0%; right: 0%; height: 2em; background-color: #F88; font-weight: bold; line-height: 2em; padding: 0%;">Content Tag Options</div>
+		<div style="padding-top: 2.2em;"><div style="font-size: 75%;">Record ID <span id="tag_options_id"></span></div><div style="padding: 0.5em;"><input style="font-weight: bold; font-size: 125%; width: 90%; text-align: center; margin-left: 0%; margin-bottom: 0.5em; line-height: 1.5em; border: 2px solid #F88; border-radius: 0.3em;" id="tag_options_name"><div style="font-size: 75%;">Note: moderators set the category of tags, which causes them to have icons in the listing, when the tags are officially added to the dictionary.</div></div></div><div style="margin: 0.5em;"><input type="checkbox" id="tag_type_checkbox">&nbsp;<label for="tag_type_checkbox">Display in Brief Summary</label></div><div style="margin: 1em;"><button onclick="update_options('tag');">Update Information</button></div><div><button onclick="delete_options('tag');">Remove From This Work</button></div><div style="margin: 1em; margin-top: 2em;"><button onclick="cancel_click('tag');">Cancel</button></div></div>
 	</div>
 </div>
 </body>
