@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="us-ascii" />
+	<title>Book Page Demo</title>
+	<style type="text/css">
+@media screen and (max-width: 768px)
+{
+	.widescreen
+	{
+		display: none;
+	}
+}
+@media not screen and (max-width: 768px)
+{
+	.narrowscreen
+	{
+		display: none;
+	}
+}
+*
+{
+	font-family: sans-serif;
+}
+div.fullscreen
+{
+	position: fixed;
+	left: 0%;
+	right: 0%;
+	top: 0%;
+	bottom: 0%;
+}
+div.content
+{
+	overflow-y: scroll;
+}
+div.blocker
+{
+	background-color: #FFF;
+	background-color: rgba( 255, 255, 255, 0.85 );
+}
+div.blocker > div
+{
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	right: 10%;
+	max-height: 80%;
+	overflow: auto;
+	border: 1px solid #888;
+	background-color: #FFF;
+	text-align: center;
+	box-shadow: 0em 0.25em 0.5em rgba(0,0,0,0.5);
+	padding: 0.5em;
+}
+div.options table
+{
+	width: 100%;
+}
+div.infobox p
+{
+	margin-left: 1em;
+}
+button
+{
+	font-size: 100%;
+	line-height: 1.5em;
+	cursor: pointer;
+}
+input.add
+{
+	border: 2px solid #F88;
+	border-radius: 0.3em;
+	font-size: 100%;
+	padding-top: 0.1em;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	line-height: 1.5em;
+	min-width: 20em;
+}
+input.add.series
+{
+	border-color: #6C6;
+}
+input.add.author
+{
+	border-color: #8DF;
+}
+input.add.character
+{
+	border-color: #FB8;
+}
+span.tag
+{
+	border: 2px solid #F88;
+	background-color: #FCC;
+	border-radius: 0.3em;
+	padding-top: 0.1em;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	display: inline-block;
+	white-space: pre;
+	font-weight: bold;
+	margin: 0.2em;
+	line-height: 1.5em;
+}
+span.tag.major
+{
+	background-color: #F88;
+}
+span.tag.author
+{
+	border-color: #8DF;
+	background-color: #CEF;
+}
+span.tag.author.major
+{
+	background-color: #8DF;
+}
+span.tag.series, span.tag.setting
+{
+	background-color: #ACE5AC;
+	border-color: #6C6;
+}
+span.tag.series.major, span.tag.setting.major
+{
+	background-color: #6C6;
+}
+span.tag.character
+{
+	background-color: #FEC;
+	border-color: #FB8;
+}
+span.tag.character.major
+{
+	background-color: #FB8;
+	border-color: #FB8;
+}
+span.tag.unofficial, span.tag.minor
+{
+	font-weight: normal;
+	font-style: oblique;
+}
+span.tag.edition
+{
+	border-color: #999;
+	background-color: #EEE;
+	font-weight: normal;
+}
+span.tag.book
+{
+	border-color: #B8F;
+	background-color: #DCF;
+}
+input.disambiguation + label
+{
+	display: none;
+}
+input.disambiguation:checked + label
+{
+	display: inline;
+	margin: 0%;
+	padding: 0%;
+	font-weight: normal;
+	font-style: italic;
+}
+input#cd ~ div.cd
+{
+	display: none;
+}
+input#cd:checked ~ div.cd
+{
+	display: inherit;
+}
+th
+{
+	text-align: right;
+	vertical-align: top;
+}
+td
+{
+	text-align: left;
+	vertical-align: top;
+}
+span.tag.inline
+{
+	border: none;
+	margin: 0%;
+	padding: 0% 0.2em 0% 0.2em;
+	line-height: inherit;
+	font-weight: normal;
+	border-radius: 0.15em;
+}
+	</style>
+	<script type="text/javascript">
+function add_element(container,tag,clickScript,content,cssClass,idName)
+{
+	var e = document.createElement(tag);
+	if ( clickScript != null )
+	{
+		e.onclick = clickScript;
+	}
+	if ( content != null )
+	{
+		e.appendChild(content);
+	}
+	if ( cssClass != null )
+	{
+		e.className = cssClass;
+	}
+	if ( idName != null )
+	{
+		e.id = idName;
+	}
+	container.appendChild(e);
+	return e;
+}
+	</script>
+</head>
+<body>
+<div class="fullscreen content">
+<div class="infobox" style="margin: 0.25em;">
+<div><h1 class="title"><span class="tag character">Samuel Vimes</span></h1>
+<h3>Appearances as Main Character</h3>
+	<dl style="margin-left: 1em;">
+		<dt>By<span class="tag author">Pratchett, Terry</span></dt>
+			<dd><span class="tag book">Feet of Clay</span><span class="tag book">Guards! Guards!</span><span class="tag book">Jingo</span><span class="tag book">Men at Arms</span><span class="tag book">Night Watch</span><span class="tag book">Snuff</span><span class="tag book">The Fifth Elephant</span><span class="tag book">Thud!</span><span class="tag book">Where&rsquo;s My Cow?</span></dd>
+	</dl>
+<h3>Appearances as Minor Character</h3>
+	<dl style="margin-left: 1em;">
+		<dt>By<span class="tag author">Pratchett, Terry</span></dt>
+			<dd><span class="tag book">I Shall Wear Midnight</span><span class="tag book">Making Money</span><span class="tag book">Monstrous Regiment</span><span class="tag book">Raising Steam</span><span class="tag book">The Last Hero</span><span class="tag book">The Truth</span><span class="tag book">Unseen Academicals</span></dd>
+	</dl>
+<h3>Major Characters Appearing in the Same Books</h3>
+	<dl style="margin-left: 1em;">
+		<dt>By<span class="tag author">Pratchett, Terry</span></dt>
+			<dd><span class="tag character">71-Hour Ahmed</span><span class="tag character">Angua von &Uuml;berwald</span><span class="tag character">Carrot Ironfoundersson</span><span class="tag character">Cheery Littlebottom</span><span class="tag character">Cohen the Barbarian</span><span class="tag character">Detritus</span><span class="tag character">Dorfl</span><span class="tag character">Dr. Cruces</span><span class="tag character">Edward D&rsquo;Eath</span><span class="tag character">Findthee Swing</span><span class="tag character">Gaspode &ldquo;The Wonder Dog&rdquo;</span><span class="tag character">Havelock Vetinari</span><span class="tag character">Igor <input type="checkbox" class="disambiguation" title="disambiguate" id="check1"><label for="check1" title="disambiguation"> (Caretaker of the Ankh-Morpork Embassy in &Uuml;berwald)</label></span><span class="tag character">Lance-Constable Cuddy</span><span class="tag character">Leonard of Quirm</span><span class="tag character">Lu-Tze</span><span class="tag character">Lupine Wonse</span><span class="tag character">Moist von Lipwig</span><span class="tag character">Mr. Nutt</span><span class="tag character">Mr. Pin</span><span class="tag character">Mr. Tulip</span><span class="tag character">Mustrum Ridcully</span><span class="tag character">Polly Perks</span><span class="tag character">Rhys Rhysson</span><span class="tag character">Rincewind</span><span class="tag character">Sacharissa Cripslock</span><span class="tag character">Sergeant Jackrum</span><span class="tag character">Sybil Ramkin</span><span class="tag character">The Dragon <input type="checkbox" class="disambiguation" title="disambiguate" id="check2"><label for="check2" title="disambiguation"> (In Guards! Guards! by Terry Pratchett)</label></span><span class="tag character">Tiffany Aching</span><span class="tag character">William de Worde</span><span class="tag character">Willikins</span><span class="tag character">Wolfgang von &Uuml;berwald</span></dd>
+	</dl>
+</div><h3>Character Details</h3>
+<div style="margin-left: 1em;">Please note: this section may contain spoilers.</div>
+<div style="margin-left: 1em; margin-top: 1em;"><input type="checkbox" id="cd"><label for="cd">Show this section</label>
+<div class="cd">
+<h3 style="margin-left: -1em;">Demographic Categories</h3>
+<p>Note: only data which is directly justified in the text of the books should be used in this section; the representation of the character in adaptations of the text may vary. All information is <i>as given to the reader</i>, which may involve spoilers, and may also leave categories unknown.</p>
+	<table style="margin-left: 4em;">
+		<tr><th>Species/Race:</td><td>Human: Caucasian</td></tr>
+		<tr><th>Age:</td><td>Varies Significantly by Appearance<br>(Most Common: Middle-Aged)</td></tr>
+		<tr><th>Gender:</td><td>Cis Male</td></tr>
+		<tr><th>Orientation:</td><td>Heterosexual</td></tr>
+	</table>
+<h3 style="margin-left: -1em;">Characters in the Same Family</h3>
+<p><span class="tag character">Sybil Ramkin</span><span class="tag character">Sam Vimes</span></p>
+<h3 style="margin-left: -1em;">Biography</h3>
+<p>Samuel Vimes is the leader, eventually the titled Commander, of the City Watch of <span class="tag series inline">Ankh-Morpork</span>. Lord <span class="tag character inline">Havelock Vetinari</span>, ruler of the city, summed one of Vimes&rsquo; major character traits up concisely as: &ldquo;Commander, I always used to consider that you had a definite anti-authoritarian streak in you. [&hellip;] It seems that you have managed to retain this even though you are authority.&rdquo; He is the distant descendant of Suffer-Not-Injustice Vimes, the man who (justly) executed the last king of Ankh-Morpork (a sadistic inbred pedophile); the Vimes family was blackballed by the city nobility for this act of &ldquo;treason&rdquo; in the intervening period and Vimes is proudly plebeian. At the beginning of his first appearance, he is a depressed drunkard, approximately 40 years of age, in command of only 2 men, <span class="tag character inline">Fred Colon</span> and <span class="tag character inline">St. John &ldquo;Nobby&rdquo; Nobbs</span>. They are joined by the initially-na&iuml;ve <span class="tag character inline">Carrot Ironfoundersson</span>, and defeat a gigantic dragon which briefly terrorized the city. This is the first of the major services provided by Vimes and the Watch to Lord Vetinari, and Vimes is repeatedly rewarded with titles and promotions, eventually becoming a Duke and Commander of the City Watch, the Day Watch having been merged. Carrot is not-entirely-secretly the long-lost heir to the throne of Ankh-Morpork, a fact of which Vimes is uneasily aware, but he refuses to claim the throne on the grounds that the city is working perfectly well as things are, particularly due to Vimes and Vetinari. Because of his incorruptible nature and attachment to the city, Carrot becomes Vimes&rsquo; second-in-command.</p>
+<p>Vimes is extremely in love with his wife, n&eacute;e Lady <span class="tag inline character">Sybil Ramkin</span>, and is terribly protective of &mdash; though somewhat astonished by &mdash; his eventual son <span class="tag inline character">Sam Vimes</span>. When he married Lady Sybil, he became the richest man in the city, a fact which caused him a great deal of psychological discomfort. Before marrying her, he would wear cheap boots with cardboard soles, and could identify his location in the city by the feel of the paving under his feet. One of the early passages mentioning this idea has become famous in the real world to the point that the &ldquo;Boots Theory&rdquo; is now actual terminology among economists. (In a nutshell: poor people must buy cheap products, which are badly-made and must be repeatedly replaced, and thus they must actually spend more money over time than if they could afford a more expensive initial outlay, which acts to keep them from escaping poverty.) After Vimes is temporarily sent back in time in pursuit of the charismatic but vicious criminal <span class="tag character inline">Carcer</span>, living for a second time through the short-lived People&rsquo;s Revolution of the Glorious 25th of May and returning just in time for the birth of his son. As a reward to doctor <span class="tag character inline">John &ldquo;Mossy&rdquo; Lawn</span>, who apparently is the Discworld inventor of forceps and therefore the only person in the world who could have safely carried out the delivery, Vimes founds and funds the first real hospital in Ankh-Morpork.</p>
+<p>Under Vimes&rsquo; tenure, the Watch goes from being a tiny and totally ineffectual force to being large and highly efficient. Vimes is virulently anti-corruption, insists on enforcing the law against infractions by the powerful and wealthy, and is affectionately called &ldquo;Old Stoneface&rdquo; by his underlings, who believe he does not know this. The Ankh-Morpork Watch is a prominent practicer of affirmative action, and employs any &ldquo;minority&rdquo; which comes to the city &mdash; which in Discworld terms means species, not ethnicity, so that the Watch has at least one werewolf (<span class="tag character inline">Angua von &Uuml;berwald</span>), golem (<span class="tag character inline">Dorfl</span>), and zombie (<span class="tag character inline">Reg Shoe</span>), and many dwarves and trolls (most notably  Lance-Constable <span class="tag character inline">Cuddy</span>, Sergeant <span class="tag character inline">Detritus</span>, and forensic detective <span class="tag character inline">Cheery Littlebottom</span>), among others. (There is also at least one member of the latter-day Watch who is a black-skinned human, <span class="tag character inline">Precious Jolson</span>, but Discworld humans generally focus any racist tendencies along species lines and so this is considered uncontroversial.) Vimes has a horror of vampires but eventually employs one. The Watch originally had no pensions or survivor benefits for widows or children, and in the early days, half of Vimes&rsquo; pay was used to support the survivors of dead officers.</p>
+<p>Although Vimes is very much a city-dweller who is only really comfortable in Ankh-Morpork, he has repeatedly traveled elsewhere: he traveled to the country of <span class="tag series inline">Klatch</span> in pursuit of the suspicious <span class="tag character inline">71-hour Ahmed</span>, and ended up preventing a war which the outnumbered Ankh-Morpork forces under the command of the incompetent and arrogant Lord <span class="tag character inline">Ronald Rust</span> would certainly have lost. He was later sent as ambassador to <span class="tag inline series">&Uuml;berwald</span> and became involved in events surrounding the coronation of the controversial new Low King of the dwarves, <span class="tag character inline">Rhys Rhysson</span>. Later, he assisted the Low King and the new king of the trolls, <span class="tag inline character">Mr. Shine</span>, to avert yet another war between the two species at <span class="tag series inline">Koom Valley</span>. In the course of doing so, Vimes was possessed by an ancient entity of violent-but-just vengeance called <span class="tag character inline">The Summoning Dark</span>; in later books he is able to use this being&rsquo;s powers, such as the ability to see in the dark, but is reluctant to do so out of fear that he might become violent himself. He eventually visited the <span class="tag series inline">Ramkin estate</span> in the country (and there assisted in the emancipation of goblins) and also the city of <span class="tag inline series">Quirm</span>. In his final appearance, he accompanied the Low King as a bodyguard on the newly-completed (and only recently-invented) railroad from Ankh-Morpork to &Uuml;berwald to confront a junta led by reactionary dwarves.</p>
+</div>
+<div class="fullscreen blocker" id="blocker" style="z-index: 10;">
+	<div class="options" id="first_view">
+		<div style="position: absolute; left: 0%; top: 0%; right: 0%; height: 3em; background-color: blue; color: white;  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; font-weight: bold; line-height: 3em; padding: 0%;">Explanation In Case I Sleep Through The Meeting</div>
+		<div style="margin: 1em; margin-top: 3.5em;">This partial mockup attempts to incorporate, at least partially, some of the suggestions which have been made about recording character data, and also demonstrates what could inherently be done with character data <i>just by keeping a list of which characters appear in which books</i>. (Although there are characters who appear in books by multiple authors &mdash; like Dracula, for instance &mdash; I chose Samuel Vimes from Discworld as the character I am most familiar with who is a major character in some books and a minor character in others, and he is, as far as I know, exclusive to Terry Pratchett.) The section which is visible by default would require no additional recorded data beyond lists of characters; the section which must be shown manually would require extra data entry beyond mere character names to have any meaningful use, but could be implemented without <i>too</i> much effort as an entirely optional add-on.</div>
+		<div style="margin: 1em;">Most of the options shown are justifiable to implement on the grounds of making it easier for users to search the site &mdash; in fact, some of the &ldquo;hidden&rdquo; section would provide details which some people find very important, and which are currently not widely available in searchable form. For example, the &ldquo;Gender (as given to the reader)&rdquo; option would be handy &mdash; although we would need to offer many options to make it standardized (and therefore searchable), including the obvious &ldquo;Not Specified&rdquo; and real-world choices like Nonbindary and Cis- and Trans- Male and Female, but also some options which only arise in sci-fi and fantasy settings like &ldquo;None (Male-Presenting)&ldquo; (a &ldquo;male&rdquo; artificial intelligence, for instance) and &ldquo;Cis Fictional Gender&rdquo; (an alien race with genders not equivalent to our own). Given the understanding that this data would be left blank by default, and would be optional, providing a place to enter it in a standardized way would be a nice feature to have and would make a selling point for the site. The most difficult thing to implement would be the &ldquo;biography&rdquo; section &mdash; Wikipedia gives us some idea of how annoying people can get about editing that sort of thing, and so that might be something to add later, after everything else is in place, for the completist fanatics to then return to and fill in.</div>
+		<div style="margin: 1em;">Since I was in a bit of a hurry, this page is entirely static, with no working controls except the checkboxes. Speaking of them: we&rsquo;ve talked just a little on Discord about disambiguation. My suggestion is that the recorded structure of any sort of data we track <i>other than</i> plain content tags (which, being concepts with a dictionary for official terms, should never need disambiguation) should have a secondary string, usually hidden, which would be used for disambiguation. This string would start off empty, and when we discover that there are two authors with the same name, or two locations with the same name which are useful to keep separate (such as &ldquo;London, England&rdquo; in the real world and &ldquo;London, England&rdquo; in cyberpunk dystopian alternate history), or two books with the same title (quite common), we just enter different values into the two formerly-empty extra strings. By default, these would be hidden, but would appear (when not empty, in parentheses) in autocomplete and in any browsable index of tags. In this mockup, I added checkboxes to a couple of tags which would need disambiguation, which show the &ldquo;hidden&rdquo; string when checked.</div>
+		<div style="margin: 1em;">Note, by the way, that this page does not require Javascript, despite all those checkboxes. This is accomplished using the &ldquo;:checked&rdquo; pseudo-selector in CSS version 3. Although this does slightly raise the requirements for browser compatibility, every browser tracked on <a href="https://caniuse.com/">caniuse.com</a> has supported it since at least March of 2011, and support started showing up in 2008, so it&rsquo;s <i>probably</i> a safe trick to use. (Then again: how good is CSS support on mobile devices like the Kindle, where dynamic content is not really supported? Something more to research, I guess.)</div>
+		<div style="margin: 1em;"><button onclick="document.getElementById('first_view').style.display = 'none';document.getElementById('blocker').style.display = 'none';">Understood, Let Me Look!</button></div>
+	</div>
+</div>
+</body>
+</html>
